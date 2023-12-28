@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <title>Speech to Text</title>
     <script src="main.js" defer></script>
+    <script src="components/read-text.component.js" defer></script>
 </head>
 <body>
 <header>
     <h1>Speech to Text AI Assistance</h1>
 </header>
 <main>
-    <button id="start-button" aria-label="Start Button">Start</button>
-    <button id="stop-button" aria-label="Start Button">Stop</button>
-    <p aria-readonly="true" aria-label="Speech to text will be shown here" id="transcript">
+    <section>
+        <h5>Speech to Text</h5>
+        <button id="start-button" aria-label="Start Button">Start</button>
+        <button id="stop-button" aria-label="Start Button">Stop</button>
+        <p aria-readonly="true" aria-label="Speech to text will be shown here" id="transcript">
+    </section>
+    <read-text-component />
 </main>
 </body>
 </html>
