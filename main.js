@@ -19,7 +19,9 @@ function startRecording() {
         recognition.onresult = handleResult;
         recognition.start();
         isRecording = true;
-        console.log('Recognition started');
+
+        startButton.disabled = true;
+        stopButton.disabled = false;
     } else {
         console.warn('Failed to start recording', recognition);
     }
@@ -28,6 +30,9 @@ function startRecording() {
 function stopRecording() {
     recognition.stop();
     isRecording = false;
+
+    startButton.disabled = false;
+    stopButton.disabled = true;
 }
 
 /**
